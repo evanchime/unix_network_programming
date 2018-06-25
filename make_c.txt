@@ -1,0 +1,2 @@
+gcc -I../lib -g -O2 -D_REENTRANT -Wall   -c -o exercise_3.3.o exercise_3.3.c
+gcc -I../lib -g -O2 -D_REENTRANT -Wall -o exercise_3.3 exercise_3.3.o ../libunp.a -lpthread
