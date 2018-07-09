@@ -1,2 +1,3 @@
-gcc -I../lib -g -O2 -D_REENTRANT -Wall   -c -o exercise4.4srv.o exercise4.4srv.c
-gcc -I../lib -g -O2 -D_REENTRANT -Wall -o exercise4.4srv exercise4.4srv.o ../libunp.a -lpthread
+gcc -I../lib -g -O2 -D_REENTRANT -Wall   -c -o mytcpcli04.o mytcpcli04.c
+gcc -I../lib -g -O2 -D_REENTRANT -Wall -o mytcpcli04 mytcpcli04.o ../libunp.a -lpthread
+
