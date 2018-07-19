@@ -1,3 +1,6 @@
+#ifndef _MYSTR_CLI_H 
+#define _MYSTR_CLI_H
+
 #include	"unp.h"
 
 void
@@ -15,3 +18,5 @@ str_cli(FILE *fp, int sockfd)
 		Fputs(recvline, stdout);
 	}
 }
+
+#endif /* _MYSTR_CLI_H */

@@ -1,3 +1,6 @@
+#ifndef _MYSIGCHLDWAIT_H 
+#define _MYSIGCHLDWAIT_H
+
 #include	"unp.h"
 
 void
@@ -12,3 +15,5 @@ sig_chld(int signo)
     		printf("child %d terminated\n", pid);
 	return;
 }
+
+#endif /* _MYSIGCHLDWAIT_H */

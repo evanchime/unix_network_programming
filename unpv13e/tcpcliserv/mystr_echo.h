@@ -1,3 +1,6 @@
+#ifndef _MYSTR_ECHO_H 
+#define _MYSTR_ECHO_H
+
 #include	"unp.h"
 
 void
@@ -15,3 +18,5 @@ again:
 	else if (n < 0)
 		err_sys("str_echo: read error");
 }
+
+#endif /* _MYSTR_ECHO_H */

@@ -1,3 +1,6 @@
+#ifndef _MYSTR_ECHO09_H 
+#define _MYSTR_ECHO09_H
+
 #include	"unp.h"
 #include	"sum.h"
 
@@ -16,3 +19,5 @@ str_echo(int sockfd)
 		Writen(sockfd, &result, sizeof(result));
 	}
 }
+
+#endif /* _MYSTR_ECHO09_H */

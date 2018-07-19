@@ -1,3 +1,6 @@
+#ifndef _MYSTR_CLI09_H 
+#define _MYSTR_CLI09_H
+
 #include	"unp.h"
 #include	"sum.h"
 
@@ -22,3 +25,5 @@ str_cli(FILE *fp, int sockfd)
 		printf("%ld\n", result.sum);
 	}
 }
+
+#endif /* _MYSTR_CLI09_H */
