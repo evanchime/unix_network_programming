@@ -1,5 +1,5 @@
 #include	"unp.h"
-#include	"mysigchldwait.h"
+//#include	"mysigchldwait.h"
 //#include	"mystr_echo.h"
 #include	"mystr_echo09.h"
 
@@ -22,19 +22,19 @@ main(int argc, char **argv)
 
 	Listen(listenfd, LISTENQ);
 
-	Signal (SIGCHLD, sig_chld); /* must call waitpid() */ 
+//	Signal (SIGCHLD, sig_chld); /* must call waitpid() */ 
 
 
 	for ( ; ; ) {
 		clilen = sizeof(cliaddr);
-		//connfd = Accept(listenfd, (SA *) &cliaddr, &clilen);
-		if ( (connfd = accept (listenfd, (SA *) &cliaddr, &clilen)) < 0)//correctly handles a return of EINTR from accept 
+		connfd = Accept(listenfd, (SA *) &cliaddr, &clilen);
+		/*if ( (connfd = accept (listenfd, (SA *) &cliaddr, &clilen)) < 0)//correctly handles a return of EINTR from accept 
 		{              
 			if (errno == EINTR)                  
-				continue;          /* back to for() */ 
+				continue;         //  back to for() 
 			else                  
 				err_sys("accept error"); 
-		} 
+		}*/ 
  
 
 		if ( (childpid = Fork()) == 0) {	/* child process */

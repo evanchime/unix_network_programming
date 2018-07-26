@@ -6,10 +6,10 @@
 void
 str_echo(int sockfd)
 {
-	ssize_t		n;
-	char		buf[MAXLINE];
+	ssize_t	n;
+	char	buf[MAXLINE];
 
-again:
+  again:
 	while ( (n = read(sockfd, buf, MAXLINE)) > 0)
 		Writen(sockfd, buf, n);
 
