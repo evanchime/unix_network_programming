@@ -1,4 +1,4 @@
-gcc -I../lib -g -O2 -D_REENTRANT -Wall   -c -o mytcpcli04.o mytcpcli04.c
-gcc -I../lib -g -O2 -D_REENTRANT -Wall -o mytcpcli04 mytcpcli04.o ../libunp.a -lpthread
+gcc -I../lib -g -O2 -D_REENTRANT -Wall   -c -o mytcpcli01.o mytcpcli01.c
+gcc -I../lib -g -O2 -D_REENTRANT -Wall -o mytcpcli01 mytcpcli01.o ../libunp.a -lpthread
 
 
