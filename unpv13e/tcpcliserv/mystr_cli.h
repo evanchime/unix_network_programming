@@ -13,8 +13,8 @@ str_cli(FILE *fp, int sockfd)
 		//Writen(sockfd, sendline, strlen(sendline));
 		sleep(2);           
 		Writen(sockfd, sendline, 2);           
-		sleep(2)	
-		Writen(sockfd, sendline + 2, strlen(sendline) - 2); ;
+		sleep(2);	
+		Writen(sockfd, sendline + 2, strlen(sendline) - 2); 
 
 
 		if (Readline(sockfd, recvline, MAXLINE) == 0)
