@@ -1,5 +1,6 @@
 #include	"unp.h"
 #include        "mystr_cli.h" 
+#include	"mysigpipe.h"
 
 int
 main(int argc, char **argv)
@@ -14,8 +15,10 @@ main(int argc, char **argv)
 
 	bzero(&servaddr, sizeof(servaddr));
 	servaddr.sin_family = AF_INET;
-	servaddr.sin_port = htons(SERV_PORT);
+	servaddr.sin_port = htons(/*SERV_PORT*/13);
 	Inet_pton(AF_INET, argv[1], &servaddr.sin_addr);
+
+	Signal (SIGPIPE, sig_pipe);  
 
 	Connect(sockfd, (SA *) &servaddr, sizeof(servaddr));
 
